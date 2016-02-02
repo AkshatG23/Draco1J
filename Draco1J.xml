@@ -20,7 +20,23 @@
                   </block>
                 </value>
                 <next>
-                  <block type="movement_stop" id="128"></block>
+                  <block type="movement_stop" id="128">
+                    <next>
+                      <block type="led_select" id="291" inline="true">
+                        <field name="ACTION">ON</field>
+                        <value name="LED">
+                          <block type="math_number" id="298">
+                            <field name="NUM">500</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="oled_color" id="322">
+                            <field name="OBJECT">GREEN</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
                 </next>
               </block>
             </next>
