@@ -44,9 +44,14 @@
                                   <block type="oled_color" id="384">
                                     <field name="OBJECT">BLACK</field>
                                     <next>
-                                      <block type="movement_leftmotor" id="530" inline="true">
-                                        <value name="MOVLEFT">
-                                          <block type="math_number" id="546">
+                                      <block type="movement_setmotors" id="584" inline="true">
+                                        <value name="BOTHMOVLEFT">
+                                          <block type="math_number" id="591">
+                                            <field name="NUM">5000</field>
+                                          </block>
+                                        </value>
+                                        <value name="BOTHMOVRIGHT">
+                                          <block type="math_number" id="598">
                                             <field name="NUM">500</field>
                                           </block>
                                         </value>
