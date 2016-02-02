@@ -44,8 +44,8 @@
                                   <block type="oled_color" id="384">
                                     <field name="OBJECT">BLACK</field>
                                     <next>
-                                      <block type="multimedia_displaybmp" id="456">
-                                        <field name="BMP">dragon</field>
+                                      <block type="multimedia_playwav" id="476">
+                                        <field name="WAV">dog</field>
                                       </block>
                                     </next>
                                   </block>
