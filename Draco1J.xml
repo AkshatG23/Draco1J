@@ -44,8 +44,12 @@
                                   <block type="oled_color" id="384">
                                     <field name="OBJECT">BLACK</field>
                                     <next>
-                                      <block type="multimedia_playwav" id="476">
-                                        <field name="WAV">dog</field>
+                                      <block type="movement_leftmotor" id="530" inline="true">
+                                        <value name="MOVLEFT">
+                                          <block type="math_number" id="546">
+                                            <field name="NUM">500</field>
+                                          </block>
+                                        </value>
                                       </block>
                                     </next>
                                   </block>
