@@ -22,39 +22,48 @@
                 <next>
                   <block type="movement_stop" id="8">
                     <next>
-                      <block type="led_select" id="9" inline="true">
-                        <field name="ACTION">ON</field>
-                        <value name="LED">
-                          <block type="math_number" id="10">
-                            <field name="NUM">5000</field>
+                      <block type="controls_if" id="46" inline="false">
+                        <value name="IF0">
+                          <block type="sensor_light" id="30">
+                            <field name="LIGHT">RIGHT</field>
                           </block>
                         </value>
-                        <next>
-                          <block type="oled_color" id="11">
-                            <field name="OBJECT">GREEN</field>
+                        <statement name="DO0">
+                          <block type="led_select" id="9" inline="true">
+                            <field name="ACTION">ON</field>
+                            <value name="LED">
+                              <block type="math_number" id="10">
+                                <field name="NUM">5000</field>
+                              </block>
+                            </value>
                             <next>
-                              <block type="led_select" id="12" inline="true">
-                                <field name="ACTION">FLASH</field>
-                                <value name="LED">
-                                  <block type="math_number" id="13">
-                                    <field name="NUM">5000</field>
-                                  </block>
-                                </value>
+                              <block type="oled_color" id="11">
+                                <field name="OBJECT">GREEN</field>
                                 <next>
-                                  <block type="oled_color" id="14">
-                                    <field name="OBJECT">BLACK</field>
+                                  <block type="led_select" id="12" inline="true">
+                                    <field name="ACTION">FLASH</field>
+                                    <value name="LED">
+                                      <block type="math_number" id="13">
+                                        <field name="NUM">5000</field>
+                                      </block>
+                                    </value>
                                     <next>
-                                      <block type="movement_setmotors" id="15" inline="true">
-                                        <value name="BOTHMOVLEFT">
-                                          <block type="math_number" id="16">
-                                            <field name="NUM">5000</field>
+                                      <block type="oled_color" id="14">
+                                        <field name="OBJECT">BLACK</field>
+                                        <next>
+                                          <block type="movement_setmotors" id="15" inline="true">
+                                            <value name="BOTHMOVLEFT">
+                                              <block type="math_number" id="16">
+                                                <field name="NUM">5000</field>
+                                              </block>
+                                            </value>
+                                            <value name="BOTHMOVRIGHT">
+                                              <block type="math_number" id="17">
+                                                <field name="NUM">500</field>
+                                              </block>
+                                            </value>
                                           </block>
-                                        </value>
-                                        <value name="BOTHMOVRIGHT">
-                                          <block type="math_number" id="17">
-                                            <field name="NUM">500</field>
-                                          </block>
-                                        </value>
+                                        </next>
                                       </block>
                                     </next>
                                   </block>
@@ -62,7 +71,7 @@
                               </block>
                             </next>
                           </block>
-                        </next>
+                        </statement>
                       </block>
                     </next>
                   </block>
