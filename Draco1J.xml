@@ -22,12 +22,32 @@
                 <next>
                   <block type="movement_stop" id="8">
                     <next>
-                      <block type="oled_drawnumber" id="9" inline="true">
-                        <value name="NUMBER">
-                          <block type="math_number" id="10">
-                            <field name="NUM">999</field>
+                      <block type="oled_color" id="66">
+                        <field name="OBJECT">GREEN</field>
+                        <next>
+                          <block type="oled_linerect" id="57">
+                            <field name="OBJECT">RECT</field>
+                            <next>
+                              <block type="oled_linerect" id="75">
+                                <field name="OBJECT">LINE</field>
+                                <next>
+                                  <block type="movement_setmotors" id="101" inline="true">
+                                    <value name="BOTHMOVLEFT">
+                                      <block type="math_number" id="108">
+                                        <field name="NUM">20</field>
+                                      </block>
+                                    </value>
+                                    <value name="BOTHMOVRIGHT">
+                                      <block type="math_number" id="115">
+                                        <field name="NUM">0</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
                           </block>
-                        </value>
+                        </next>
                       </block>
                     </next>
                   </block>
