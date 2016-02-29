@@ -95,38 +95,38 @@
                                                                             <next>
                                                                               <block type="movement_stop" id="31">
                                                                                 <next>
-                                                                                  <block type="oled_setcursor" id="86" inline="true">
+                                                                                  <block type="oled_setcursor" id="32" inline="true">
                                                                                     <value name="STARTX">
-                                                                                      <block type="math_number" id="93">
+                                                                                      <block type="math_number" id="33">
                                                                                         <field name="NUM">10</field>
                                                                                       </block>
                                                                                     </value>
                                                                                     <value name="STARTY">
-                                                                                      <block type="math_number" id="94">
+                                                                                      <block type="math_number" id="34">
                                                                                         <field name="NUM">10</field>
                                                                                       </block>
                                                                                     </value>
                                                                                     <next>
-                                                                                      <block type="oled_drawnumber" id="47" inline="true">
+                                                                                      <block type="oled_drawnumber" id="35" inline="true">
                                                                                         <value name="NUMBER">
-                                                                                          <block type="sensor_light" id="60">
+                                                                                          <block type="sensor_light" id="36">
                                                                                             <field name="LIGHT">RIGHT</field>
                                                                                           </block>
                                                                                         </value>
                                                                                         <next>
-                                                                                          <block type="oled_setend" id="103" inline="true">
+                                                                                          <block type="oled_setend" id="37" inline="true">
                                                                                             <value name="ENDX">
-                                                                                              <block type="math_number" id="118">
+                                                                                              <block type="math_number" id="38">
                                                                                                 <field name="NUM">100</field>
                                                                                               </block>
                                                                                             </value>
                                                                                             <value name="ENDY">
-                                                                                              <block type="math_number" id="125">
+                                                                                              <block type="math_number" id="39">
                                                                                                 <field name="NUM">100</field>
                                                                                               </block>
                                                                                             </value>
                                                                                             <next>
-                                                                                              <block type="oled_cleardisplay" id="69"></block>
+                                                                                              <block type="oled_cleardisplay" id="40"></block>
                                                                                             </next>
                                                                                           </block>
                                                                                         </next>
