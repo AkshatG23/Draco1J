@@ -6,8 +6,8 @@
       </block>
     </value>
     <value name="BOTHMOVRIGHT">
-      <block type="math_number" id="3">
-        <field name="NUM">999</field>
+      <block type="math_number" id="59">
+        <field name="NUM">500</field>
       </block>
     </value>
     <next>
