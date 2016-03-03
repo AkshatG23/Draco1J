@@ -121,15 +121,15 @@
                                                                                               </block>
                                                                                             </value>
                                                                                             <next>
-                                                                                              <block type="oled_drawnumber" id="39" inline="true">
-                                                                                                <value name="NUMBER">
-                                                                                                  <block type="sensor_line" id="40">
-                                                                                                    <field name="LINE">MIDDLE</field>
-                                                                                                  </block>
-                                                                                                </value>
+                                                                                              <block type="oled_color" id="41">
+                                                                                                <field name="OBJECT">BLACK</field>
                                                                                                 <next>
-                                                                                                  <block type="oled_color" id="41">
-                                                                                                    <field name="OBJECT">BLACK</field>
+                                                                                                  <block type="oled_drawnumber" id="39" inline="true">
+                                                                                                    <value name="NUMBER">
+                                                                                                      <block type="sensor_line" id="40">
+                                                                                                        <field name="LINE">MIDDLE</field>
+                                                                                                      </block>
+                                                                                                    </value>
                                                                                                     <next>
                                                                                                       <block type="oled_setend" id="42" inline="true">
                                                                                                         <value name="ENDX">
