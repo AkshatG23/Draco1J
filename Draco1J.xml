@@ -142,6 +142,32 @@
                                                                                                             <field name="NUM">100</field>
                                                                                                           </block>
                                                                                                         </value>
+                                                                                                        <next>
+                                                                                                          <block type="controls_repeat" id="59" inline="true">
+                                                                                                            <value name="TIMES">
+                                                                                                              <block type="math_arithmetic" id="66" inline="true">
+                                                                                                                <field name="OP">MODULO</field>
+                                                                                                                <value name="A">
+                                                                                                                  <block type="math_number" id="73">
+                                                                                                                    <field name="NUM">1020</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <value name="B">
+                                                                                                                  <block type="math_number" id="95">
+                                                                                                                    <field name="NUM">9348</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <statement name="DO">
+                                                                                                              <block type="oled_drawnumber" id="212" inline="true">
+                                                                                                                <value name="NUMBER">
+                                                                                                                  <block type="sensor_battery" id="251"></block>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </statement>
+                                                                                                          </block>
+                                                                                                        </next>
                                                                                                       </block>
                                                                                                     </next>
                                                                                                   </block>
