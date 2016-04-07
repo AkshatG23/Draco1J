@@ -45,351 +45,297 @@
                                       <block type="oled_linerect" id="15">
                                         <field name="OBJECT">LINE</field>
                                         <next>
-                                          <block type="movement_setmotors" id="16" inline="true">
-                                            <value name="BOTHMOVLEFT">
-                                              <block type="math_number" id="17">
-                                                <field name="NUM">0</field>
-                                              </block>
-                                            </value>
-                                            <value name="BOTHMOVRIGHT">
-                                              <block type="math_number" id="18">
-                                                <field name="NUM">135</field>
-                                              </block>
-                                            </value>
+                                          <block type="movement_stutter" id="28">
                                             <next>
-                                              <block type="robot_delay" id="19" inline="true">
+                                              <block type="robot_delay" id="29" inline="true">
                                                 <value name="DELAY">
-                                                  <block type="math_number" id="20">
-                                                    <field name="NUM">5000</field>
+                                                  <block type="math_number" id="30">
+                                                    <field name="NUM">1000</field>
                                                   </block>
                                                 </value>
                                                 <next>
-                                                  <block type="movement_stop" id="21">
+                                                  <block type="movement_stop" id="31">
                                                     <next>
-                                                      <block type="movement_setmotors" id="22" inline="true">
-                                                        <value name="BOTHMOVLEFT">
-                                                          <block type="math_number" id="23">
-                                                            <field name="NUM">0</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="BOTHMOVRIGHT">
-                                                          <block type="math_number" id="24">
-                                                            <field name="NUM">135</field>
-                                                          </block>
-                                                        </value>
+                                                      <block type="movement_reverse" id="32">
                                                         <next>
-                                                          <block type="robot_delay" id="25" inline="true">
+                                                          <block type="robot_delay" id="33" inline="true">
                                                             <value name="DELAY">
-                                                              <block type="math_number" id="26">
-                                                                <field name="NUM">2000</field>
+                                                              <block type="math_number" id="34">
+                                                                <field name="NUM">1000</field>
                                                               </block>
                                                             </value>
                                                             <next>
-                                                              <block type="movement_stop" id="27">
+                                                              <block type="movement_stop" id="35">
                                                                 <next>
-                                                                  <block type="movement_stutter" id="28">
+                                                                  <block type="oled_setcursor" id="36" inline="true">
+                                                                    <value name="STARTX">
+                                                                      <block type="math_number" id="37">
+                                                                        <field name="NUM">10</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="STARTY">
+                                                                      <block type="math_number" id="38">
+                                                                        <field name="NUM">10</field>
+                                                                      </block>
+                                                                    </value>
                                                                     <next>
-                                                                      <block type="robot_delay" id="29" inline="true">
-                                                                        <value name="DELAY">
-                                                                          <block type="math_number" id="30">
-                                                                            <field name="NUM">1000</field>
-                                                                          </block>
-                                                                        </value>
+                                                                      <block type="oled_color" id="39">
+                                                                        <field name="OBJECT">BLACK</field>
                                                                         <next>
-                                                                          <block type="movement_stop" id="31">
+                                                                          <block type="oled_drawnumber" id="40" inline="true">
+                                                                            <value name="NUMBER">
+                                                                              <block type="sensor_line" id="41">
+                                                                                <field name="LINE">MIDDLE</field>
+                                                                              </block>
+                                                                            </value>
                                                                             <next>
-                                                                              <block type="movement_reverse" id="32">
+                                                                              <block type="oled_setend" id="42" inline="true">
+                                                                                <value name="ENDX">
+                                                                                  <block type="math_number" id="43">
+                                                                                    <field name="NUM">100</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="ENDY">
+                                                                                  <block type="math_number" id="44">
+                                                                                    <field name="NUM">100</field>
+                                                                                  </block>
+                                                                                </value>
                                                                                 <next>
-                                                                                  <block type="robot_delay" id="33" inline="true">
-                                                                                    <value name="DELAY">
-                                                                                      <block type="math_number" id="34">
-                                                                                        <field name="NUM">1000</field>
+                                                                                  <block type="controls_repeat" id="45" inline="true">
+                                                                                    <value name="TIMES">
+                                                                                      <block type="math_arithmetic" id="46" inline="true">
+                                                                                        <field name="OP">MULTIPLY</field>
+                                                                                        <value name="A">
+                                                                                          <block type="math_number" id="47">
+                                                                                            <field name="NUM">1020</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="B">
+                                                                                          <block type="math_number" id="48">
+                                                                                            <field name="NUM">9348</field>
+                                                                                          </block>
+                                                                                        </value>
                                                                                       </block>
                                                                                     </value>
+                                                                                    <statement name="DO">
+                                                                                      <block type="oled_drawnumber" id="49" inline="true">
+                                                                                        <value name="NUMBER">
+                                                                                          <block type="sensor_battery" id="50"></block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </statement>
                                                                                     <next>
-                                                                                      <block type="movement_stop" id="35">
+                                                                                      <block type="movement_right" id="51">
                                                                                         <next>
-                                                                                          <block type="oled_setcursor" id="36" inline="true">
-                                                                                            <value name="STARTX">
-                                                                                              <block type="math_number" id="37">
-                                                                                                <field name="NUM">10</field>
-                                                                                              </block>
-                                                                                            </value>
-                                                                                            <value name="STARTY">
-                                                                                              <block type="math_number" id="38">
-                                                                                                <field name="NUM">10</field>
+                                                                                          <block type="robot_delay" id="52" inline="true">
+                                                                                            <value name="DELAY">
+                                                                                              <block type="math_number" id="53">
+                                                                                                <field name="NUM">1000</field>
                                                                                               </block>
                                                                                             </value>
                                                                                             <next>
-                                                                                              <block type="oled_color" id="39">
-                                                                                                <field name="OBJECT">BLACK</field>
+                                                                                              <block type="movement_forward" id="54">
                                                                                                 <next>
-                                                                                                  <block type="oled_drawnumber" id="40" inline="true">
-                                                                                                    <value name="NUMBER">
-                                                                                                      <block type="sensor_line" id="41">
-                                                                                                        <field name="LINE">MIDDLE</field>
+                                                                                                  <block type="robot_delay" id="55" inline="true">
+                                                                                                    <value name="DELAY">
+                                                                                                      <block type="math_number" id="56">
+                                                                                                        <field name="NUM">2000</field>
                                                                                                       </block>
                                                                                                     </value>
                                                                                                     <next>
-                                                                                                      <block type="oled_setend" id="42" inline="true">
-                                                                                                        <value name="ENDX">
-                                                                                                          <block type="math_number" id="43">
-                                                                                                            <field name="NUM">100</field>
-                                                                                                          </block>
-                                                                                                        </value>
-                                                                                                        <value name="ENDY">
-                                                                                                          <block type="math_number" id="44">
-                                                                                                            <field name="NUM">100</field>
-                                                                                                          </block>
-                                                                                                        </value>
+                                                                                                      <block type="movement_stop" id="57">
                                                                                                         <next>
-                                                                                                          <block type="controls_repeat" id="45" inline="true">
+                                                                                                          <block type="controls_repeat" id="58" inline="true">
                                                                                                             <value name="TIMES">
-                                                                                                              <block type="math_arithmetic" id="46" inline="true">
-                                                                                                                <field name="OP">MODULO</field>
-                                                                                                                <value name="A">
-                                                                                                                  <block type="math_number" id="47">
-                                                                                                                    <field name="NUM">1020</field>
-                                                                                                                  </block>
-                                                                                                                </value>
-                                                                                                                <value name="B">
-                                                                                                                  <block type="math_number" id="48">
-                                                                                                                    <field name="NUM">9348</field>
-                                                                                                                  </block>
-                                                                                                                </value>
+                                                                                                              <block type="math_number" id="59">
+                                                                                                                <field name="NUM">5</field>
                                                                                                               </block>
                                                                                                             </value>
                                                                                                             <statement name="DO">
-                                                                                                              <block type="oled_drawnumber" id="49" inline="true">
-                                                                                                                <value name="NUMBER">
-                                                                                                                  <block type="sensor_battery" id="50"></block>
+                                                                                                              <block type="procedures_ifreturn" id="60" inline="true">
+                                                                                                                <mutation value="1"></mutation>
+                                                                                                                <value name="CONDITION">
+                                                                                                                  <block type="sensor_button" id="61">
+                                                                                                                    <field name="OBJECT">UP</field>
+                                                                                                                  </block>
                                                                                                                 </value>
-                                                                                                              </block>
-                                                                                                            </statement>
-                                                                                                            <next>
-                                                                                                              <block type="movement_right" id="174">
+                                                                                                                <value name="VALUE">
+                                                                                                                  <block type="sensor_spectrometer" id="62">
+                                                                                                                    <field name="LIGHT">IR940</field>
+                                                                                                                  </block>
+                                                                                                                </value>
                                                                                                                 <next>
-                                                                                                                  <block type="robot_delay" id="52" inline="true">
+                                                                                                                  <block type="robot_delay" id="63" inline="true">
                                                                                                                     <value name="DELAY">
-                                                                                                                      <block type="math_number" id="53">
-                                                                                                                        <field name="NUM">1000</field>
+                                                                                                                      <block type="math_number" id="64">
+                                                                                                                        <field name="NUM">500</field>
                                                                                                                       </block>
                                                                                                                     </value>
                                                                                                                     <next>
-                                                                                                                      <block type="movement_forward" id="54">
+                                                                                                                      <block type="procedures_ifreturn" id="65" inline="true">
+                                                                                                                        <mutation value="1"></mutation>
+                                                                                                                        <value name="CONDITION">
+                                                                                                                          <block type="sensor_spectrometer" id="66">
+                                                                                                                            <field name="LIGHT">IR940</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="VALUE">
+                                                                                                                          <block type="sensor_spectrometer" id="67">
+                                                                                                                            <field name="LIGHT">IR880</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
                                                                                                                         <next>
-                                                                                                                          <block type="robot_delay" id="55" inline="true">
+                                                                                                                          <block type="robot_delay" id="68" inline="true">
                                                                                                                             <value name="DELAY">
-                                                                                                                              <block type="math_number" id="56">
-                                                                                                                                <field name="NUM">2000</field>
+                                                                                                                              <block type="math_number" id="69">
+                                                                                                                                <field name="NUM">500</field>
                                                                                                                               </block>
                                                                                                                             </value>
                                                                                                                             <next>
-                                                                                                                              <block type="movement_stop" id="57">
+                                                                                                                              <block type="procedures_ifreturn" id="70" inline="true">
+                                                                                                                                <mutation value="1"></mutation>
+                                                                                                                                <value name="CONDITION">
+                                                                                                                                  <block type="sensor_spectrometer" id="71">
+                                                                                                                                    <field name="LIGHT">IR880</field>
+                                                                                                                                  </block>
+                                                                                                                                </value>
+                                                                                                                                <value name="VALUE">
+                                                                                                                                  <block type="sensor_spectrometer" id="72">
+                                                                                                                                    <field name="LIGHT">RED</field>
+                                                                                                                                  </block>
+                                                                                                                                </value>
                                                                                                                                 <next>
-                                                                                                                                  <block type="controls_repeat" id="342" inline="true">
-                                                                                                                                    <value name="TIMES">
-                                                                                                                                      <block type="math_number" id="349">
-                                                                                                                                        <field name="NUM">5</field>
+                                                                                                                                  <block type="robot_delay" id="73" inline="true">
+                                                                                                                                    <value name="DELAY">
+                                                                                                                                      <block type="math_number" id="74">
+                                                                                                                                        <field name="NUM">500</field>
                                                                                                                                       </block>
                                                                                                                                     </value>
-                                                                                                                                    <statement name="DO">
-                                                                                                                                      <block type="procedures_ifreturn" id="184" inline="true">
+                                                                                                                                    <next>
+                                                                                                                                      <block type="procedures_ifreturn" id="75" inline="true">
                                                                                                                                         <mutation value="1"></mutation>
                                                                                                                                         <value name="CONDITION">
-                                                                                                                                          <block type="sensor_button" id="191">
-                                                                                                                                            <field name="OBJECT">UP</field>
+                                                                                                                                          <block type="sensor_spectrometer" id="76">
+                                                                                                                                            <field name="LIGHT">RED</field>
                                                                                                                                           </block>
                                                                                                                                         </value>
                                                                                                                                         <value name="VALUE">
-                                                                                                                                          <block type="sensor_spectrometer" id="198">
-                                                                                                                                            <field name="LIGHT">IR940</field>
+                                                                                                                                          <block type="sensor_spectrometer" id="77">
+                                                                                                                                            <field name="LIGHT">YELLOW</field>
                                                                                                                                           </block>
                                                                                                                                         </value>
                                                                                                                                         <next>
-                                                                                                                                          <block type="robot_delay" id="241" inline="true">
+                                                                                                                                          <block type="robot_delay" id="78" inline="true">
                                                                                                                                             <value name="DELAY">
-                                                                                                                                              <block type="math_number" id="248">
+                                                                                                                                              <block type="math_number" id="79">
                                                                                                                                                 <field name="NUM">500</field>
                                                                                                                                               </block>
                                                                                                                                             </value>
                                                                                                                                             <next>
-                                                                                                                                              <block type="procedures_ifreturn" id="202" inline="true">
+                                                                                                                                              <block type="procedures_ifreturn" id="80" inline="true">
                                                                                                                                                 <mutation value="1"></mutation>
                                                                                                                                                 <value name="CONDITION">
-                                                                                                                                                  <block type="sensor_spectrometer" id="220">
-                                                                                                                                                    <field name="LIGHT">IR940</field>
+                                                                                                                                                  <block type="sensor_spectrometer" id="81">
+                                                                                                                                                    <field name="LIGHT">YELLOW</field>
                                                                                                                                                   </block>
                                                                                                                                                 </value>
                                                                                                                                                 <value name="VALUE">
-                                                                                                                                                  <block type="sensor_spectrometer" id="227">
-                                                                                                                                                    <field name="LIGHT">IR880</field>
+                                                                                                                                                  <block type="sensor_spectrometer" id="82">
+                                                                                                                                                    <field name="LIGHT">GREEN</field>
                                                                                                                                                   </block>
                                                                                                                                                 </value>
                                                                                                                                                 <next>
-                                                                                                                                                  <block type="robot_delay" id="249" inline="true">
+                                                                                                                                                  <block type="robot_delay" id="83" inline="true">
                                                                                                                                                     <value name="DELAY">
-                                                                                                                                                      <block type="math_number" id="250">
+                                                                                                                                                      <block type="math_number" id="84">
                                                                                                                                                         <field name="NUM">500</field>
                                                                                                                                                       </block>
                                                                                                                                                     </value>
                                                                                                                                                     <next>
-                                                                                                                                                      <block type="procedures_ifreturn" id="228" inline="true">
+                                                                                                                                                      <block type="procedures_ifreturn" id="85" inline="true">
                                                                                                                                                         <mutation value="1"></mutation>
                                                                                                                                                         <value name="CONDITION">
-                                                                                                                                                          <block type="sensor_spectrometer" id="229">
-                                                                                                                                                            <field name="LIGHT">IR880</field>
+                                                                                                                                                          <block type="sensor_spectrometer" id="86">
+                                                                                                                                                            <field name="LIGHT">GREEN</field>
                                                                                                                                                           </block>
                                                                                                                                                         </value>
                                                                                                                                                         <value name="VALUE">
-                                                                                                                                                          <block type="sensor_spectrometer" id="230">
-                                                                                                                                                            <field name="LIGHT">RED</field>
+                                                                                                                                                          <block type="sensor_spectrometer" id="87">
+                                                                                                                                                            <field name="LIGHT">BLUE</field>
                                                                                                                                                           </block>
                                                                                                                                                         </value>
                                                                                                                                                         <next>
-                                                                                                                                                          <block type="robot_delay" id="251" inline="true">
+                                                                                                                                                          <block type="robot_delay" id="88" inline="true">
                                                                                                                                                             <value name="DELAY">
-                                                                                                                                                              <block type="math_number" id="252">
+                                                                                                                                                              <block type="math_number" id="89">
                                                                                                                                                                 <field name="NUM">500</field>
                                                                                                                                                               </block>
                                                                                                                                                             </value>
                                                                                                                                                             <next>
-                                                                                                                                                              <block type="procedures_ifreturn" id="231" inline="true">
+                                                                                                                                                              <block type="procedures_ifreturn" id="90" inline="true">
                                                                                                                                                                 <mutation value="1"></mutation>
                                                                                                                                                                 <value name="CONDITION">
-                                                                                                                                                                  <block type="sensor_spectrometer" id="233">
-                                                                                                                                                                    <field name="LIGHT">RED</field>
+                                                                                                                                                                  <block type="sensor_spectrometer" id="91">
+                                                                                                                                                                    <field name="LIGHT">BLUE</field>
                                                                                                                                                                   </block>
                                                                                                                                                                 </value>
                                                                                                                                                                 <value name="VALUE">
-                                                                                                                                                                  <block type="sensor_spectrometer" id="232">
-                                                                                                                                                                    <field name="LIGHT">YELLOW</field>
+                                                                                                                                                                  <block type="sensor_button" id="92">
+                                                                                                                                                                    <field name="OBJECT">DOWN</field>
                                                                                                                                                                   </block>
                                                                                                                                                                 </value>
                                                                                                                                                                 <next>
-                                                                                                                                                                  <block type="robot_delay" id="253" inline="true">
-                                                                                                                                                                    <value name="DELAY">
-                                                                                                                                                                      <block type="math_number" id="254">
-                                                                                                                                                                        <field name="NUM">500</field>
+                                                                                                                                                                  <block type="procedures_ifreturn" id="93" inline="true">
+                                                                                                                                                                    <mutation value="1"></mutation>
+                                                                                                                                                                    <value name="CONDITION">
+                                                                                                                                                                      <block type="sensor_button" id="94">
+                                                                                                                                                                        <field name="OBJECT">DOWN</field>
+                                                                                                                                                                      </block>
+                                                                                                                                                                    </value>
+                                                                                                                                                                    <value name="VALUE">
+                                                                                                                                                                      <block type="sensor_button" id="95">
+                                                                                                                                                                        <field name="OBJECT">RIGHT</field>
                                                                                                                                                                       </block>
                                                                                                                                                                     </value>
                                                                                                                                                                     <next>
-                                                                                                                                                                      <block type="procedures_ifreturn" id="234" inline="true">
+                                                                                                                                                                      <block type="procedures_ifreturn" id="96" inline="true">
                                                                                                                                                                         <mutation value="1"></mutation>
                                                                                                                                                                         <value name="CONDITION">
-                                                                                                                                                                          <block type="sensor_spectrometer" id="236">
-                                                                                                                                                                            <field name="LIGHT">YELLOW</field>
+                                                                                                                                                                          <block type="sensor_button" id="97">
+                                                                                                                                                                            <field name="OBJECT">RIGHT</field>
                                                                                                                                                                           </block>
                                                                                                                                                                         </value>
                                                                                                                                                                         <value name="VALUE">
-                                                                                                                                                                          <block type="sensor_spectrometer" id="235">
-                                                                                                                                                                            <field name="LIGHT">GREEN</field>
+                                                                                                                                                                          <block type="sensor_button" id="98">
+                                                                                                                                                                            <field name="OBJECT">LEFT</field>
                                                                                                                                                                           </block>
                                                                                                                                                                         </value>
                                                                                                                                                                         <next>
-                                                                                                                                                                          <block type="robot_delay" id="255" inline="true">
-                                                                                                                                                                            <value name="DELAY">
-                                                                                                                                                                              <block type="math_number" id="256">
-                                                                                                                                                                                <field name="NUM">500</field>
+                                                                                                                                                                          <block type="procedures_ifreturn" id="99" inline="true">
+                                                                                                                                                                            <mutation value="1"></mutation>
+                                                                                                                                                                            <value name="CONDITION">
+                                                                                                                                                                              <block type="sensor_button" id="100">
+                                                                                                                                                                                <field name="OBJECT">LEFT</field>
+                                                                                                                                                                              </block>
+                                                                                                                                                                            </value>
+                                                                                                                                                                            <value name="VALUE">
+                                                                                                                                                                              <block type="sensor_button" id="101">
+                                                                                                                                                                                <field name="OBJECT">ENTER</field>
                                                                                                                                                                               </block>
                                                                                                                                                                             </value>
                                                                                                                                                                             <next>
-                                                                                                                                                                              <block type="procedures_ifreturn" id="237" inline="true">
+                                                                                                                                                                              <block type="procedures_ifreturn" id="102" inline="true">
                                                                                                                                                                                 <mutation value="1"></mutation>
                                                                                                                                                                                 <value name="CONDITION">
-                                                                                                                                                                                  <block type="sensor_spectrometer" id="238">
-                                                                                                                                                                                    <field name="LIGHT">GREEN</field>
+                                                                                                                                                                                  <block type="sensor_button" id="103">
+                                                                                                                                                                                    <field name="OBJECT">ENTER</field>
                                                                                                                                                                                   </block>
                                                                                                                                                                                 </value>
                                                                                                                                                                                 <value name="VALUE">
-                                                                                                                                                                                  <block type="sensor_spectrometer" id="277">
-                                                                                                                                                                                    <field name="LIGHT">BLUE</field>
+                                                                                                                                                                                  <block type="sensor_button" id="104">
+                                                                                                                                                                                    <field name="OBJECT">UP</field>
                                                                                                                                                                                   </block>
                                                                                                                                                                                 </value>
-                                                                                                                                                                                <next>
-                                                                                                                                                                                  <block type="robot_delay" id="259" inline="true">
-                                                                                                                                                                                    <value name="DELAY">
-                                                                                                                                                                                      <block type="math_number" id="260">
-                                                                                                                                                                                        <field name="NUM">500</field>
-                                                                                                                                                                                      </block>
-                                                                                                                                                                                    </value>
-                                                                                                                                                                                    <next>
-                                                                                                                                                                                      <block type="procedures_ifreturn" id="268" inline="true">
-                                                                                                                                                                                        <mutation value="1"></mutation>
-                                                                                                                                                                                        <value name="CONDITION">
-                                                                                                                                                                                          <block type="sensor_spectrometer" id="239">
-                                                                                                                                                                                            <field name="LIGHT">BLUE</field>
-                                                                                                                                                                                          </block>
-                                                                                                                                                                                        </value>
-                                                                                                                                                                                        <value name="VALUE">
-                                                                                                                                                                                          <block type="sensor_button" id="284">
-                                                                                                                                                                                            <field name="OBJECT">DOWN</field>
-                                                                                                                                                                                          </block>
-                                                                                                                                                                                        </value>
-                                                                                                                                                                                        <next>
-                                                                                                                                                                                          <block type="procedures_ifreturn" id="285" inline="true">
-                                                                                                                                                                                            <mutation value="1"></mutation>
-                                                                                                                                                                                            <value name="CONDITION">
-                                                                                                                                                                                              <block type="sensor_button" id="287">
-                                                                                                                                                                                                <field name="OBJECT">DOWN</field>
-                                                                                                                                                                                              </block>
-                                                                                                                                                                                            </value>
-                                                                                                                                                                                            <value name="VALUE">
-                                                                                                                                                                                              <block type="sensor_button" id="305">
-                                                                                                                                                                                                <field name="OBJECT">RIGHT</field>
-                                                                                                                                                                                              </block>
-                                                                                                                                                                                            </value>
-                                                                                                                                                                                            <next>
-                                                                                                                                                                                              <block type="procedures_ifreturn" id="306" inline="true">
-                                                                                                                                                                                                <mutation value="1"></mutation>
-                                                                                                                                                                                                <value name="CONDITION">
-                                                                                                                                                                                                  <block type="sensor_button" id="307">
-                                                                                                                                                                                                    <field name="OBJECT">RIGHT</field>
-                                                                                                                                                                                                  </block>
-                                                                                                                                                                                                </value>
-                                                                                                                                                                                                <value name="VALUE">
-                                                                                                                                                                                                  <block type="sensor_button" id="308">
-                                                                                                                                                                                                    <field name="OBJECT">LEFT</field>
-                                                                                                                                                                                                  </block>
-                                                                                                                                                                                                </value>
-                                                                                                                                                                                                <next>
-                                                                                                                                                                                                  <block type="procedures_ifreturn" id="315" inline="true">
-                                                                                                                                                                                                    <mutation value="1"></mutation>
-                                                                                                                                                                                                    <value name="CONDITION">
-                                                                                                                                                                                                      <block type="sensor_button" id="316">
-                                                                                                                                                                                                        <field name="OBJECT">LEFT</field>
-                                                                                                                                                                                                      </block>
-                                                                                                                                                                                                    </value>
-                                                                                                                                                                                                    <value name="VALUE">
-                                                                                                                                                                                                      <block type="sensor_button" id="317">
-                                                                                                                                                                                                        <field name="OBJECT">ENTER</field>
-                                                                                                                                                                                                      </block>
-                                                                                                                                                                                                    </value>
-                                                                                                                                                                                                    <next>
-                                                                                                                                                                                                      <block type="procedures_ifreturn" id="320" inline="true">
-                                                                                                                                                                                                        <mutation value="1"></mutation>
-                                                                                                                                                                                                        <value name="CONDITION">
-                                                                                                                                                                                                          <block type="sensor_button" id="321">
-                                                                                                                                                                                                            <field name="OBJECT">ENTER</field>
-                                                                                                                                                                                                          </block>
-                                                                                                                                                                                                        </value>
-                                                                                                                                                                                                        <value name="VALUE">
-                                                                                                                                                                                                          <block type="sensor_button" id="322">
-                                                                                                                                                                                                            <field name="OBJECT">UP</field>
-                                                                                                                                                                                                          </block>
-                                                                                                                                                                                                        </value>
-                                                                                                                                                                                                      </block>
-                                                                                                                                                                                                    </next>
-                                                                                                                                                                                                  </block>
-                                                                                                                                                                                                </next>
-                                                                                                                                                                                              </block>
-                                                                                                                                                                                            </next>
-                                                                                                                                                                                          </block>
-                                                                                                                                                                                        </next>
-                                                                                                                                                                                      </block>
-                                                                                                                                                                                    </next>
-                                                                                                                                                                                  </block>
-                                                                                                                                                                                </next>
                                                                                                                                                                               </block>
                                                                                                                                                                             </next>
                                                                                                                                                                           </block>
@@ -411,7 +357,7 @@
                                                                                                                                           </block>
                                                                                                                                         </next>
                                                                                                                                       </block>
-                                                                                                                                    </statement>
+                                                                                                                                    </next>
                                                                                                                                   </block>
                                                                                                                                 </next>
                                                                                                                               </block>
@@ -423,7 +369,7 @@
                                                                                                                   </block>
                                                                                                                 </next>
                                                                                                               </block>
-                                                                                                            </next>
+                                                                                                            </statement>
                                                                                                           </block>
                                                                                                         </next>
                                                                                                       </block>
